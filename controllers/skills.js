@@ -1,3 +1,4 @@
+import { render } from "ejs"
 import { Skill } from "../models/skill.js"
 
 function index(req, res) {
@@ -13,6 +14,11 @@ function index(req, res) {
   })
 }
 
+function newSkill(req, res) {
+  res.render("skills/new")
+}
+
 export {
-  index
+  index,
+  newSkill as new,
 }
